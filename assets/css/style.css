@@ -134,3 +134,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#play-audio{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    border:none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#play-audio:hover{
+    background-color: #0056b3;
+}

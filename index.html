@@ -10,6 +10,11 @@
   <script defer src="assets/js/form-handler.js"></script>
 </head>
 <body>
+    <!-- Autoplay Audio -->
+  <button id="play-audio">Play Musik</button>
+  <audio id="background-music" loop>
+      <source src="assets/audio/lagu-aqiqah.mp3" type="audio/mpeg">
+  </audio>
   <div class="container">
     <div class="card">
       <h1><i class="bx bxs-baby-carriage"></i> Tasyakuran Aqiqah</h1>
@@ -74,21 +79,17 @@
     </footer>
   </div>
 
-  <!-- Autoplay Audio -->
-  <audio id="background-music" autoplay loop>
-    <source src="assets/audio/lagu-aqiqah.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung pemutar audio.
-  </audio>
+
   <script>
+    document.getElementById('play-audio').addEventListener('click', function () {
     const audio = document.getElementById('background-music');
-    audio.loop(true);
-    function playMusic() {
-        audio.play();
-    }
-    function pauseMusic() {
-        audio.pause();
-    }
-    audio.volume = 0.5;
+    audio.play().then(() => {
+        console.log("Musik dimulai!");
+    }).catch(error => {
+        console.error("Autoplay gagal:", error);
+    });
+});
+
   </script>
 </body>
 </html>
