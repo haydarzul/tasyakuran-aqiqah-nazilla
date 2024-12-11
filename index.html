@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Tasyakuran Aqiqah</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script defer src="assets/js/countdown.js"></script>
+  <script defer src="assets/js/form-handler.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1><i class="bx bxs-baby-carriage"></i> Tasyakuran Aqiqah</h1>
+      <section id="gallery" class="gallery">
+        <!-- <h2>Foto Nazilla Shaliha Putrianarli</h2> -->
+        <div class="photo-grid">
+            <img src="assets/images/foto1.jpg" alt="Foto Nazilla 1">
+            <img src="assets/images/foto2.jpg" alt="Foto Nazilla 2">
+            <img src="assets/images/foto3.jpg" alt="Foto Nazilla 3">
+        </div>
+    </section>
+      <p>Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara tasyakuran aqiqah anak kami:</p>
+      <h2><i class="bx bxs-heart"></i> Nazilla Shaliha Putrianarli <i class="bx bxs-heart"></i></h2>
+      <p>yang Insya Allah akan dilaksanakan pada:</p>
+      <p>
+        <strong><i class="bx bx-calendar"></i> Hari/Tanggal:</strong> Sabtu, 14 Desember 2024<br>
+        <strong><i class="bx bx-time"></i> Waktu:</strong> 19.00 - selesai<br>
+        <strong><i class="bx bx-map"></i> Tempat:</strong> Perumahan Bekasi Green City Blok Q67 No.12
+      </p>
+      <div class="countdown">
+        <i class="bx bx-hourglass"></i> Waktu menuju acara: <span id="countdown"></span>
+      </div>
+      <p><strong>Lokasi:</strong></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7155462070727!2d107.0532703!3d-6.1688317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69898314ea2641%3A0xf6c2db8f67f85249!2sBekasi%20Green%20City!5e0!3m2!1sid!2sid!4v1733848885403!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2>
+        Kami yang mengundang:
+      </h2>
+      <h2>Bpk.Nasron</h2>
+      <h3>&</h3>
+      <h2>Ibu. Monalisa Marsella</h2>
+    </div>
+
+    <!-- Form -->
+    <div class="form-section">
+      <h3><i class="bx bx-edit"></i> Konfirmasi Kehadiran</h3>
+      <form id="confirmationForm">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="message">Ucapan:</label><br>
+        <textarea id="message" name="message" rows="3" required></textarea><br>
+
+        <label>Status Kehadiran:</label><br><br>
+        <label for="attend">Hadir</label><br>
+        <input type="radio" id="attend" name="status" value="Hadir" required>
+        <label for="notAttend">Berhalangan Hadir</label><br>
+        <input type="radio" id="notAttend" name="status" value="Berhalangan Hadir">
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+    <!-- Display Messages -->
+    <div class="responses">
+      <h3><i class="bx bx-message"></i> Ucapan & Konfirmasi Kehadiran</h3>
+      <ul id="responseList"></ul>
+    </div>
+    <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEmfHSbGHFSor6rVyStCdsVVgO7k9-NM2ZJ4lT-Ha_q2I7sQ/viewform?embedded=true" width="640" height="760" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe> -->
+
+
+    <footer>
+      <p><i class="bx bx-copyright"></i> 2024 Keluarga Putrianarli</p>
+    </footer>
+  </div>
+
+  <!-- Autoplay Audio -->
+  <audio id="background-music" autoplay loop>
+    <source src="assets/audio/lagu-aqiqah.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+  <script>
+    const audio = document.getElementById('background-music');
+    audio.loop(true);
+    function playMusic() {
+        audio.play();
+    }
+    function pauseMusic() {
+        audio.pause();
+    }
+    audio.volume = 0.5;
+  </script>
+</body>
+</html>
